@@ -1,472 +1,249 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>麻生区スタンプラリー2025 | まちを歩いて、もっと好きになる</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="麻生区内のお店や施設を巡ってスタンプを集めよう！参加無料のスタンプラリー開催。集めたスタンプの数に応じて素敵な景品が当たるチャンス！">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【イベント名未定】 | 麻生区スタンプラリー</title>
+    <meta name="description" content="【ここにイベントの短い説明文を入れます（約120文字以内推奨）】">
+    <style>
+        /* --- ▼▼ カラー設定（後で変更可能） ▼▼ --- */
+        :root {
+            --main-color: #2E8B57;   /* メインカラー（現在は緑） */
+            --accent-color: #F4A460; /* アクセントカラー（現在はオレンジ） */
+            --text-color: #333333;
+            --bg-color: #fcfcfc;
+            --gray-color: #f0f0f0;
+        }
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
-        Arial, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN",
-        "メイリオ", Meiryo, sans-serif;
-      background: #f5f7fb;
-      color: #333;
-      line-height: 1.7;
-    }
-    a {
-      color: #0066cc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    header {
-      background: linear-gradient(135deg, #ffb347, #ffcc33);
-      color: #333;
-      padding: 1.8rem 1rem 1.6rem;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 1.6rem;
-      font-weight: 700;
-    }
-    header p {
-      margin: 0.3rem 0 0;
-      font-size: 0.9rem;
-    }
-    .date-badge {
-      display: inline-block;
-      margin-top: 0.6rem;
-      padding: 0.25rem 0.8rem;
-      background: #fff;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-    }
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 1.2rem 1rem 2.5rem;
-    }
-    .hero {
-      background: #fff;
-      border-radius: 1.2rem;
-      padding: 1.4rem 1.3rem 1.6rem;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
-      margin-bottom: 1.4rem;
-    }
-    .hero-title {
-      display: flex;
-      align-items: center;
-      gap: 0.7rem;
-      margin-bottom: 0.5rem;
-    }
-    .hero-title span.icon {
-      font-size: 1.6rem;
-    }
-    .hero-title h2 {
-      margin: 0;
-      font-size: 1.3rem;
-    }
-    .hero-lead {
-      margin: 0.4rem 0 0.7rem;
-      font-weight: 500;
-      font-size: 0.98rem;
-    }
-    .hero-highlight {
-      background: #fff7d6;
-      border-radius: 0.75rem;
-      padding: 0.8rem 0.9rem;
-      font-size: 0.85rem;
-      border: 1px dashed #ffb347;
-      margin-top: 0.2rem;
-    }
-    .hero-cta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-top: 1rem;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.65rem 1.1rem;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      font-size: 0.9rem;
-      font-weight: 600;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-    .btn-primary {
-      background: #ff7b54;
-      color: #fff;
-      box-shadow: 0 4px 10px rgba(255,123,84,0.35);
-    }
-    .btn-outline {
-      background: #fff;
-      color: #ff7b54;
-      border: 2px solid #ff7b54;
-    }
+        /* --- 基本スタイル --- */
+        body {
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+        }
+        a { text-decoration: none; color: inherit; transition: opacity 0.3s; }
+        a:hover { opacity: 0.7; }
+        img { max-width: 100%; height: auto; display: block; }
+        ul { list-style: none; padding: 0; }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
-      margin-bottom: 1.6rem;
-    }
-    @media (max-width: 768px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-      header h1 {
-        font-size: 1.25rem;
-      }
-    }
-    .card {
-      background: #fff;
-      border-radius: 1.1rem;
-      padding: 1rem 1rem 1.1rem;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.03);
-    }
-    .card h3 {
-      margin-top: 0;
-      margin-bottom: 0.5rem;
-      font-size: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-    .card h3 span {
-      font-size: 1.2rem;
-    }
-    .card p {
-      margin: 0.2rem 0;
-      font-size: 0.88rem;
-    }
-    .card ul {
-      margin: 0.3rem 0 0;
-      padding-left: 1.3rem;
-      font-size: 0.86rem;
-    }
-    .section {
-      background: #fff;
-      border-radius: 1.1rem;
-      padding: 1.2rem 1rem 1.3rem;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.03);
-      margin-bottom: 1.2rem;
-    }
-    .section h2 {
-      margin-top: 0;
-      font-size: 1.1rem;
-      border-left: 4px solid #ffb347;
-      padding-left: 0.45rem;
-    }
-    .step-list {
-      list-style: none;
-      padding: 0;
-      margin: 0.4rem 0 0;
-    }
-    .step-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.6rem;
-      margin-bottom: 0.6rem;
-      font-size: 0.9rem;
-    }
-    .step-no {
-      flex: 0 0 1.4rem;
-      height: 1.4rem;
-      border-radius: 999px;
-      background: #ffb347;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: #fff;
-      margin-top: 0.1rem;
-    }
-    .info-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.88rem;
-      margin-top: 0.5rem;
-    }
-    .info-table th,
-    .info-table td {
-      border-bottom: 1px solid #eee;
-      padding: 0.45rem 0.3rem;
-      vertical-align: top;
-    }
-    .info-table th {
-      width: 7em;
-      text-align: left;
-      color: #666;
-      font-weight: 600;
-    }
-    .badge {
-      display: inline-block;
-      padding: 0.15rem 0.5rem;
-      border-radius: 999px;
-      font-size: 0.75rem;
-      background: #e6f3ff;
-      color: #0059b3;
-      margin-right: 0.2rem;
-    }
-    .prize-list {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0.7rem;
-      margin-top: 0.6rem;
-      font-size: 0.85rem;
-    }
-    @media (max-width: 600px) {
-      .prize-list {
-        grid-template-columns: 1fr;
-      }
-    }
-    .prize-item {
-      background: #fff9e6;
-      border-radius: 0.8rem;
-      padding: 0.5rem 0.6rem 0.6rem;
-      border: 1px dashed #ffd27f;
-    }
-    .prize-item strong {
-      display: block;
-      font-size: 0.95rem;
-    }
-    .note {
-      font-size: 0.78rem;
-      color: #777;
-      margin-top: 0.5rem;
-    }
-    .faq-item {
-      margin-bottom: 0.7rem;
-      font-size: 0.9rem;
-    }
-    .faq-q {
-      font-weight: 600;
-      margin-bottom: 0.1rem;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.78rem;
-      color: #888;
-      padding: 1rem 0 1.5rem;
-    }
-  </style>
+        /* --- ヘッダー --- */
+        header {
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+        }
+        .logo { font-weight: bold; font-size: 1.1rem; color: var(--main-color); }
+        .nav-pc { display: flex; gap: 20px; font-size: 0.9rem; }
+        
+        @media (max-width: 768px) {
+            .nav-pc { display: none; } /* スマホではメニュー非表示（簡易対応） */
+        }
+
+        /* --- ヒーロー（メイン画像） --- */
+        .hero {
+            background-color: var(--gray-color);
+            text-align: center;
+            padding: 60px 20px;
+            background-image: url('https://placehold.jp/1200x600.png?text=メインビジュアル画像%0A(1200x600推奨)');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            /* 文字が見やすいように画像を暗くする処理 */
+            position: relative; 
+        }
+        .hero::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5); /* 黒の半透明レイヤー */
+        }
+        .hero-content {
+            position: relative; z-index: 1;
+        }
+        .hero h1 { font-size: 2rem; margin-bottom: 10px; }
+        .hero p { font-size: 1rem; margin-bottom: 30px; font-weight: bold; }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+        }
+
+        /* --- セクション共通 --- */
+        section { padding: 60px 0; }
+        section:nth-child(even) { background-color: white; }
+        h2 {
+            text-align: center;
+            font-size: 1.6rem;
+            margin-bottom: 40px;
+            color: var(--main-color);
+        }
+        
+        /* --- お知らせ欄（未確定情報が多い時に便利） --- */
+        .news-box {
+            background: white;
+            border: 2px solid var(--main-color);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: -30px;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* --- 3カラムグリッド（スポット・景品など） --- */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .card-body { padding: 15px; }
+        .card-title { font-weight: bold; margin-bottom: 10px; display: block;}
+        .card-text { font-size: 0.9rem; color: #666; }
+
+        /* --- フッター --- */
+        footer {
+            background: var(--text-color);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.8rem;
+        }
+    </style>
 </head>
 <body>
 
-<header>
-  <h1>麻生区スタンプラリー2025</h1>
-  <p>まちを歩いて、食べて、見つけて、もっと麻生区が好きになる。</p>
-  <div class="date-badge">開催期間：2025年〇月〇日（日）〜〇月〇日（日）</div>
-</header>
+    <header>
+        <div class="container header-inner">
+            <div class="logo">【イベント名ロゴ】</div>
+            <nav class="nav-pc">
+                <a href="#about">イベント概要</a>
+                <a href="#howto">参加方法</a>
+                <a href="#spots">スポット</a>
+                <a href="#contact">お問い合わせ</a>
+            </nav>
+        </div>
+    </header>
 
-<main class="container">
-
-  <!-- ヒーローセクション -->
-  <section class="hero">
-    <div class="hero-title">
-      <span class="icon">📱</span>
-      <h2>スマホ片手に、麻生区をぐるっと探検！</h2>
-    </div>
-    <p class="hero-lead">
-      麻生区内の <strong>参加店舗・施設を巡ってスタンプを集める</strong> スタンプラリーを開催中！<br>
-      お買い物ついでに、お散歩ついでに、家族や友だちと一緒に楽しめます♪
-    </p>
-    <div class="hero-highlight">
-      ✅ 参加無料／どなたでもOK<br>
-      ✅ スタンプ数に応じて <strong>抽選で素敵なプレゼント</strong> が当たる！<br>
-      ✅ 新しいお気に入りのお店やスポットを見つけよう
+    <div class="hero">
+        <div class="hero-content">
+            <h1>【ここにタイトルが入ります】</h1>
+            <p>開催期間：【20XX年X月X日 〜 X月X日】</p>
+            <a href="#howto" class="btn">参加方法をチェック</a>
+        </div>
     </div>
 
-    <div class="hero-cta">
-      <a href="#howto" class="btn btn-primary">参加方法を見る</a>
-      <a href="#spot-list" class="btn btn-outline">スタンプスポットを見る</a>
+    <div class="container">
+        <div class="news-box">
+            <h3 style="margin-top:0; color:var(--main-color);">📢 最新のお知らせ</h3>
+            <ul style="margin:0; padding-left: 1em;">
+                <li>2024.XX.XX　【サイトをプレオープンしました】</li>
+                <li>2024.XX.XX　【詳細情報は決定次第、順次公開いたします】</li>
+            </ul>
+        </div>
     </div>
-  </section>
 
-  <!-- 3つのポイント -->
-  <section class="grid">
-    <article class="card">
-      <h3><span>🧒</span> 子どもから大人まで楽しめる</h3>
-      <p>全年齢誰でも、楽しめるコースをご用意しています。</p>
-      <ul>
-        <li>休日のお散歩コースにぴったり</li>
-        <li>近所でも意外な発見があるかも？</li>
-      </ul>
-    </article>
+    <section id="about">
+        <div class="container">
+            <h2>このイベントについて</h2>
+            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <p>
+                    【ここにイベントのコンセプトや挨拶文が入ります。】<br>
+                    <br>
+                    例：麻生区の隠れた魅力を探すスタンプラリーを開催します。<br>
+                    まだ詳細は調整中ですが、楽しい企画を準備中です。<br>
+                    続報をお待ちください！
+                </p>
+            </div>
+        </div>
+    </section>
 
-    <article class="card">
-      <h3><span>🏬</span> 麻生区のお店を応援</h3>
-      <p>飲食店や公共施設など、身近なスポットが参加しています。</p>
-      <ul>
-        <li>気になっていたお店に行くきっかけに</li>
-        <li>地元のお店をみんなで応援しよう</li>
-      </ul>
-    </article>
+    <section id="howto" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2>参加の流れ（予定）</h2>
+            <div class="grid-3">
+                <div class="card" style="text-align:center; padding:20px; border:none;">
+                    <div style="font-size:3rem; color:var(--accent-color);">1</div>
+                    <span class="card-title">【準備する】</span>
+                    <p class="card-text">【例：スマホを持って、マップを開く】</p>
+                </div>
+                <div class="card" style="text-align:center; padding:20px; border:none;">
+                    <div style="font-size:3rem; color:var(--accent-color);">2</div>
+                    <span class="card-title">【巡る】</span>
+                    <p class="card-text">【例：対象スポットでスタンプGET】</p>
+                </div>
+                <div class="card" style="text-align:center; padding:20px; border:none;">
+                    <div style="font-size:3rem; color:var(--accent-color);">3</div>
+                    <span class="card-title">【応募する】</span>
+                    <p class="card-text">【例：素敵な景品に応募しよう】</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <article class="card">
-      <h3><span>🎁</span> 集めてうれしいプレゼント</h3>
-      <p>集めたスタンプの数に応じて抽選に応募できます。</p>
-      <ul>
-        <li>麻生区ゆかりのグッズ・商品券など</li>
-        <li>参加賞もご用意！（※数量限定）</li>
-      </ul>
-    </article>
-  </section>
+    <section id="spots">
+        <div class="container">
+            <h2>スポット紹介（現在調整中）</h2>
+            <p style="text-align:center; margin-bottom:30px;">※対象スポットは決定次第更新します</p>
+            
+            <div class="grid-3">
+                <div class="card">
+                    <img src="https://placehold.jp/400x300.png?text=スポット写真%0A(400x300)" alt="仮画像">
+                    <div class="card-body">
+                        <span class="card-title">【スポット名 A】</span>
+                        <p class="card-text">【ここにスポットの紹介文が入ります。住所や特徴など。】</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://placehold.jp/400x300.png?text=スポット写真%0A(400x300)" alt="仮画像">
+                    <div class="card-body">
+                        <span class="card-title">【スポット名 B】</span>
+                        <p class="card-text">【ここにスポットの紹介文が入ります。住所や特徴など。】</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://placehold.jp/400x300.png?text=スポット写真%0A(400x300)" alt="仮画像">
+                    <div class="card-body">
+                        <span class="card-title">【スポット名 C】</span>
+                        <p class="card-text">【ここにスポットの紹介文が入ります。住所や特徴など。】</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- 参加方法 -->
-  <section id="howto" class="section">
-    <h2>参加方法</h2>
-    <ol class="step-list">
-      <li>
-        <div class="step-no">1</div>
-        <div>スタート地点または参加店舗で <strong>スタンプ台紙</strong> をもらいます。<br>
-          ※デジタル版の場合は、ページ下部の「デジタル台紙はこちら」からアクセスしてください。</div>
-      </li>
-      <li>
-        <div class="step-no">2</div>
-        <div>麻生区内の <strong>対象スポットを巡り、スタンプを集めます。</strong><br> </div>
-      
-      </li>
-      <li>
-        <div class="step-no">3</div>
-        <div>必要なスタンプ数が集まったら、 <strong>ゴール受付（〇〇会場 or 参加店舗）</strong> へ。<br>
-          応募用紙に必要事項を記入して、応募箱に投函したら完了です。</div>
-      </li>
-    </ol>
-    <p class="note">※スタンプ設置時間・休業日は各店舗・施設により異なります。来店前にご確認ください。</p>
-  </section>
-
-  <!-- 開催概要 -->
-  <section class="section">
-    <h2>開催概要</h2>
-    <table class="info-table">
-      <tr>
-        <th>開催期間</th>
-        <td>2025年〇月〇日（日）〜〇月〇日（日）</td>
-      </tr>
-      <tr>
-        <th>エリア</th>
-        <td>川崎市麻生区の上麻生・真福寺・王禅寺）</td>
-      </tr>
-      <tr>
-        <th>参加費</th>
-        <td>無料（スタンプラリーへの参加は無料です。店舗でのお買い物・ご飲食は別途料金がかかります。）</td>
-      </tr>
-      <tr>
-        <th>スタンプ数</th>
-        <td>
-          <span class="badge">コースは</span> 6スポット以上<br>
-        </td>
-      </tr>
-      <tr>
-        <th>応募締切</th>
-        <td>2025年〇月〇日（日）まで【必着】</td>
-      </tr>
-      <tr>
-        <th>主催</th>
-        <td>〇〇スタンプラリー実行委員会</td>
-      </tr>
-      <tr>
-        <th>お問い合わせ</th>
-        <td>メール：example@example.jp<br>※お問い合わせの内容によってはお時間をいただく場合があります。</td>
-      </tr>
-    </table>
-  </section>
-
-  <!-- スタンプスポット -->
-  <section id="spot-list" class="section">
-    <h2>スタンプスポット（一例）</h2>
-    <p style="font-size:0.88rem; margin-bottom:0.4rem;">
-      詳しいマップや最新の参加店舗情報は、チラシまたは公式SNS・WEBページをご確認ください。
-    </p>
-    <ul style="font-size:0.88rem; padding-left:1.2rem; margin:0.3rem 0 0.2rem;">
-      <li>未定</li>
-      <li>未定</li>
-      <li>未定</li>
-      <li>未定</li>
-      <li>その他、協力店舗・施設</li>
-    </ul>
-  </section>
-
-  <!-- 景品 -->
-  <section class="section">
-    <h2>集めてうれしい景品</h2>
-    <div class="prize-list">
-      <div class="prize-item">
-        <strong>6スタンプコース</strong>
-      </div>
-      <div class="prize-item">
-        <strong>5スタンプコース</strong>
-        麻生区ゆかりの <strong>オリジナルグッズ</strong>（抽選で〇名様）
-      </div>
-      <div class="prize-item">
-        <strong>Wチャンス賞</strong>
-        外れても再チャンス！応募者の中から抽選で <strong>プチギフト</strong> をプレゼント♪
-      </div>
-    </div>
-    <p class="note">
-      ※写真・イラストはイメージです。<br>
-      ※景品内容は変更になる場合があります。最新情報は公式案内をご確認ください。
-    </p>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section">
-    <h2>よくあるご質問</h2>
-    <div class="faq-item">
-      <div class="faq-q">Q. スタンプラリーの参加にお金はかかりますか？</div>
-      <div>A. 参加は無料です。ただし、各店舗でのお買い物やご飲食代はお客様のご負担となります。</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Q. 何日かに分けてスタンプを集めてもいいですか？</div>
-      <div>A. 期間中であれば、複数日に分けてのご参加も大歓迎です。</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Q. 台紙をなくしてしまいました。</div>
-      <div>A. スタート地点または参加店舗にて、再度台紙をお受け取りください。すでに集めたスタンプの引き継ぎはできませんのでご了承ください。</div>
-    </div>
-  </section>
-
-  <!-- デジタル台紙へのリンク例 -->
-  <section class="section" id="digital">
-    <h2>デジタル台紙（WEB版）</h2>
-    <p style="font-size:0.9rem;">
-      スマートフォンから参加できる、デジタル版スタンプ台紙もご利用いただけます。<br>
-      下のボタンからアクセスし、画面の案内にしたがってスタンプを集めてください。
-    </p>
-    <p>
-      <a href="#" class="btn btn-primary">デジタル台紙はこちら</a>
-    </p>
-    <p class="note">
-      ※URLは実際の公開ページに差し替えてご利用ください。<br>
-      ※通信費はお客様のご負担となります。
-    </p>
-  </section>
-
-</main>
-
-<footer>
-  coming soon
-</footer>
+    <footer id="contact">
+        <div class="container">
+            <p>【お問い合わせ先：〇〇実行委員会】</p>
+            <p>Email: example@example.com</p>
+            <br>
+            <p>&copy; 202X 麻生区スタンプラリー実行委員会</p>
+        </div>
+    </footer>
 
 </body>
 </html>
